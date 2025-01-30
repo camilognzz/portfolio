@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 10 100 80">
+  
+  
+  <!-- C moderna -->
+  <path d="M 85 25
+           A 25 25 0 0 0 85 75"
+        fill="none"
+        stroke="#2b6cb0"
+        stroke-width="10"
+        stroke-linecap="round"/>
+  
+  <!-- G moderna -->
+  <path d="M 115 25
+           A 25 25 0 0 1 115 75
+           L 115 50
+           L 130 50"
+        fill="none"
+        stroke="#2b6cb0"
+        stroke-width="10"
+        stroke-linecap="round"/>
+  
+  <!-- Punto decorativo -->
+  <circle cx="145" cy="50" r="4" fill="#2b6cb0"/>
+</svg>

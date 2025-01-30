@@ -5,7 +5,6 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
-  // Aplicar modo oscuro por defecto
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -15,13 +14,13 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="w-full bg-white dark:bg-[#0F172A] shadow-md dark:shadow-gray-900 py-4 px-6">
+    <nav className="w-full dark:shadow-none py-8 px-6">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-gray-800 dark:text-white">
-          <a href="#">MiLogo</a>
+        <div className="flex items-center gap-2 text-2xl font-bold text-gray-800 dark:text-white">
+          <img src="/camilogonzalez-logo.svg" alt="Logo" className="h-8 w-auto" />
+          <a href="#" className="leading-none">Camilo González</a>
         </div>
-
         {/* Menú principal (oculto en móviles) */}
         <ul className="hidden md:flex space-x-6">
           {["Sobre mí", "Educación", "Experiencia", "Proyectos", "Contacto"].map((item) => (
@@ -58,9 +57,8 @@ const Navbar = () => {
 
       {/* Menú móvil desplegable */}
       <div
-        className={`md:hidden bg-white dark:bg-[#0F172A] flex flex-col items-center gap-4 py-4 transition-all duration-300 ${
-          menuOpen ? "block" : "hidden"
-        }`}
+        className={`md:hidden bg-white dark:bg-[#0F172A] flex flex-col items-center gap-4 py-4 transition-all duration-300 ${menuOpen ? "block" : "hidden"
+          }`}
       >
         {["Sobre mí", "Educación", "Experiencia", "Proyectos", "Contacto"].map((item) => (
           <a
