@@ -3,32 +3,38 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-  font-family: Roboto-ExtraBold;
-  src: url('/public/fonts/Roboto-ExtraBold.woff2') format('woff2');
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 800;
-  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto-ExtraBold.woff2") format("woff2");
 }
+
 @font-face {
-  font-family: Roboto-Regular;
-  src: url('/public/fonts/Roboto-Regular.woff2') format('woff2');
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
 }
+
 @font-face {
-  font-family: Roboto-Light;
-  src: url('/public/fonts/Roboto-Light.woff2') format('woff2');
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 300;
-  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto-Light.woff2") format("woff2");
 }
+
 @font-face {
-  font-family: Oswald-Regular;
-  src: url('/public/fonts/Oswald-Regular.woff2') format('woff2');
-  font-weight: 400;
+  font-family: "Oswald";
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Oswald-Regular.woff2") format("woff2");
 }
 
 :root {
-  font-family: "Roboto-Regular";
   line-height: 1.5;
   font-weight: 400;
 
@@ -38,4 +44,53 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  font-family: Roboto, sans-serif;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+    border-right: 3px solid #8f98b7;
+  }
+  100% {
+    width: 100%; 
+    border-right: 3px solid transparent; 
+  }
+}
+
+.animate-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #8f98b7;
+  width: 0; 
+  visibility: hidden; 
+  animation: typing 3.5s steps(30) 1s forwards, fadeIn 0.5s 1s forwards; 
+}
+
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+
+@media (max-width: 414px) {
+  .animate-typing {
+    width: 95%; 
+  }
+}
+
+
+@media (min-width: 415px) {
+  .animate-typing {
+    width: 80%; 
+  }
 }

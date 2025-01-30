@@ -19,10 +19,10 @@ const Navbar = () => {
 
         <div className="flex items-center gap-2 text-2xl font-bold text-[#374151] dark:text-white ">
           <img src="/camilogonzalez-logo.svg" alt="Logo Camilo Gonzalez" className="h-8 w-auto" />
-          <a href="#" className="hidden md:block leading-none font-[Oswald-Regular]">Camilo González</a>
+          <a href="#" className="hidden lg:block leading-none font-[Oswald]">Camilo González</a>
         </div>
 
-        <ul className="hidden md:flex space-x-6 ml-auto">
+        <ul className="hidden md:flex space-x-6 ml-auto font-[Roboto]">
           {["Sobre mí", "Educación", "Experiencia", "Proyectos", "Contacto"].map((item) => (
             <li key={item}>
               <a
@@ -66,7 +66,7 @@ const Navbar = () => {
           <X size={30} />
         </button>
 
-        <div className="flex flex-col items-center justify-start mt-24 gap-6 w-full">
+        <div className="flex flex-col items-center justify-start mt-24 gap-6 w-full font-[Roboto]">
           {["Sobre mí", "Educación", "Experiencia", "Proyectos", "Contacto"].map((item) => (
             <a
               key={item}
