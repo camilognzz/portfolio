@@ -19,7 +19,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl font-bold text-gray-800 dark:text-white">
           <img src="/camilogonzalez-logo.svg" alt="Logo" className="h-8 w-auto" />
-          <a href="#" className="leading-none">Camilo González</a>
+          <a href="#" className="leading-none font-[Oswald-Regular]">Camilo González</a>
         </div>
         {/* Menú principal (oculto en móviles) */}
         <ul className="hidden md:flex space-x-6">
