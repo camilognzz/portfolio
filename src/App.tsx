@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import  AboutMe  from './components/AboutMe';
 
 function App() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
@@ -17,6 +18,7 @@ function App() {
     <div className="bg-[#E5E7EB] dark:bg-[#0F172A] min-h-screen text-[#374151] dark:text-white">
       <Navbar/>
       <Hero/>
+      <AboutMe/>
       <h1 className="text-[#374151] text-center dark:text-white">dfdd</h1>
       <button
         onClick={() => setDarkMode(!darkMode)}
