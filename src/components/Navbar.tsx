@@ -29,7 +29,7 @@ const Navbar = () => {
                 href={`#${item.toLowerCase().replace(" ", "-")}`}
                 className="hover:text-blue-500 dark:hover:text-green-400 transition relative pb-1 
              after:absolute after:right-0 after:bottom-0 after:w-full after:h-[2px] 
-             after:bg-blue-500 dark:after:text-green-400 after:scale-x-0 
+             after:bg-blue-500 dark:after:bg-green-400 after:scale-x-0 
              after:origin-right hover:after:scale-x-100 
              after:transition-transform after:duration-400"
               >
