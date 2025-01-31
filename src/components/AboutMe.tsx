@@ -1,13 +1,57 @@
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 const AboutMe = () => {
     return (
-        <section id="about" className="max-w-6xl mx-auto py-12 px-6 md:px-32 lg:px-12">
-            <div className="about max-w-5xl text-center md:text-left">
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#8F98B7] dark:text-[#D0DAFA] mb-6">
-                    Sobre Mí
-                </h2>
-                <p className="text-base sm:text-lg text-[#374151] dark:text-gray-400 leading-relaxed">
-                    Soy ingeniero de sistemas y desarrollador full stack con experiencia en tecnologías modernas para la creación de soluciones eficientes y centradas en la experiencia del usuario. Tengo conocimientos en desarrollo web utilizando <span className="text-blue-500 dark:text-green-400">HTML</span>, <span className="text-blue-500 dark:text-green-400">CSS</span>, <span className="text-blue-500 dark:text-green-400">JavaScript</span>, <span className="text-blue-500 dark:text-green-400">TypeScript</span>, <span className="text-blue-500 dark:text-green-400">React</span>, <span className="text-blue-500 dark:text-green-400">Next.js</span> y <span className="text-blue-500 dark:text-green-400">Tailwind CSS</span>, enfocándome en construir interfaces optimizadas y de alto rendimiento. En el backend, he trabajado con <span className="text-blue-500 dark:text-green-400">Node.js</span> y <span className="text-blue-500 dark:text-green-400">Spring Boot</span>, desarrollando sistemas escalables y seguros, además de gestionar bases de datos relacionales como <span className="text-blue-500 dark:text-green-400">MySQL</span> y NoSQL como <span className="text-blue-500 dark:text-green-400">MongoDB</span>. Manejo herramientas de control de versiones como <span className="text-blue-500 dark:text-green-400">Git</span> y <span className="text-blue-500 dark:text-green-400">GitHub</span>, así como plataformas de gestión de proyectos como <span className="text-blue-500 dark:text-green-400">Jira</span> y <span className="text-blue-500 dark:text-green-400">Trello</span>, aplicando metodologías ágiles para mejorar la eficiencia del desarrollo. También tengo experiencia en la personalización y desarrollo de sitios web con <span className="text-blue-500 dark:text-green-400">WordPress</span>, adaptándolos a las necesidades específicas de cada proyecto. Mi objetivo es seguir aprendiendo y creciendo profesionalmente, enfrentando nuevos desafíos y colaborando en proyectos innovadores.
-                </p>
+        <section id="about" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
+            <div className="flex flex-col md:flex-row items-start gap-10">
+                {/* Contenedor principal con la línea */}
+                <div className="md:w-2/2 flex flex-col mb-6">
+                    {/* Título con línea debajo */}
+                    <div className="flex items-center gap-2 mb-6">
+                        <h2 className="text-4xl sm:text-5xl font-extrabold text-[#8F98B7] dark:text-[#D0DAFA] mb-0">
+                            Sobre Mí
+                        </h2>
+                        <div className="flex-1 h-[1px] bg-[#8F98B7] dark:bg-[#D0DAFA]"></div>
+                    </div>
+
+                    {/* Descripción y Tecnologías en la misma columna */}
+                    <div className="flex flex-col md:flex-row gap-6">
+                        {/* Descripción */}
+                        <p className="text-lg sm:text-xl text-[#374151] dark:text-gray-400 leading-relaxed md:w-2/3 mb-6">
+                            Soy ingeniero de sistemas y desarrollador full stack con experiencia en tecnologías modernas para la creación de soluciones eficientes y centradas en la experiencia del usuario. Tengo conocimientos en desarrollo web utilizando <span className="text-blue-500 dark:text-green-400">HTML, CSS, JavaScript, TypeScript, React, Next.js</span> y <span className="text-blue-500 dark:text-green-400">Tailwind CSS</span>, enfocándome en construir interfaces optimizadas y de alto rendimiento. En el backend, he trabajado con <span className="text-blue-500 dark:text-green-400">Node.js</span> y <span className="text-blue-500 dark:text-green-400">Spring Boot</span>, desarrollando sistemas escalables y seguros, además de gestionar bases de datos como <span className="text-blue-500 dark:text-green-400">MySQL</span> y <span className="text-blue-500 dark:text-green-400">MongoDB</span>.
+                        </p>
+
+                        {/* Tecnologías */}
+                        <div className="md:w-1/3 flex flex-col">
+                            <h3 className="text-xl font-semibold text-[#8F98B7] dark:text-[#D0DAFA] mb-4">
+                                Tecnologías
+                            </h3>
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                {[
+                                    "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js",
+                                    "Tailwind CSS", "Node.js", "Spring Boot", "MySQL", "MongoDB",
+                                    "Git", "GitHub", "Jira", "Trello", "WordPress"
+                                ].map((tech) => (
+                                    <span
+                                        key={tech}
+                                        className="bg-[#8F98B7] dark:bg-[#D0DAFA] text-white dark:text-black px-3 py-1 rounded-md text-sm font-medium"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex justify-start gap-4">
+                <a href="https://www.linkedin.com/in/camilognzz1/" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-[#0077B5] dark:text-[#D0DAFA] text-3xl hover:scale-110 transition-transform" />
+                </a>
+                <a href="https://github.com/camilognzz" target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="text-[#333] dark:text-white text-3xl hover:scale-110 transition-transform" />
+                </a>
             </div>
         </section>
     );

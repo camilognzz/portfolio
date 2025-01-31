@@ -14,7 +14,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="w-full dark:shadow-none py-8 px-6">
+    <nav className="nav w-full dark:shadow-none py-8 px-6">
       <div className="container mx-auto flex justify-between items-center">
 
         <div className="flex items-center gap-2 text-2xl font-bold text-[#374151] dark:text-white ">
@@ -27,9 +27,9 @@ const Navbar = () => {
             <li key={item}>
               <a
                 href={`#${item.toLowerCase().replace(" ", "-")}`}
-                className="hover:text-blue-500 dark:hover:text-blue-400 transition relative pb-1 
+                className="hover:text-blue-500 dark:hover:text-green-400 transition relative pb-1 
              after:absolute after:right-0 after:bottom-0 after:w-full after:h-[2px] 
-             after:bg-blue-500 dark:after:bg-blue-400 after:scale-x-0 
+             after:bg-blue-500 dark:after:text-green-400 after:scale-x-0 
              after:origin-right hover:after:scale-x-100 
              after:transition-transform after:duration-400"
               >
@@ -71,7 +71,7 @@ const Navbar = () => {
             <a
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
-              className="text-2xl font-medium hover:text-blue-500 dark:hover:text-blue-400 transition"
+              className="text-2xl font-medium hover:text-blue-500 dark:hover:text-green-400 transition"
               onClick={() => setMenuOpen(false)}
             >
               {item}
