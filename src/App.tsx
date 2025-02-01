@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import  AboutMe  from './components/AboutMe';
 import Education from './components/Education';
+import ProjectSection from './components/Project';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Hero/>
       <AboutMe/>
       <Education/>
+      <ProjectSection/>
       <h1 className="text-[#374151] text-center dark:text-white">dfdd</h1>
       <button
         onClick={() => setDarkMode(!darkMode)}
