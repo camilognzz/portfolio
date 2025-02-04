@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const AboutMe = () => {
     return (
         <section id="about" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
-            <div className="about flex flex-col md:flex-row items-start gap-10">
+            <div className="flex flex-col md:flex-row items-start gap-10">
 
                 <div className="md:w-2/2 flex flex-col mb-6">
 
@@ -48,7 +48,7 @@ const AboutMe = () => {
                     <FaLinkedin className="text-[#0077B5] dark:text-[#D0DAFA] text-3xl hover:scale-110 transition-transform" />
                 </a>
                 <a href="https://github.com/camilognzz" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="text-[#333] dark:text-white text-3xl hover:scale-110 transition-transform" />
+                    <FaGithub className="text-[#333] dark:text-[#D0DAFA] text-3xl hover:scale-110 transition-transform" />
                 </a>
             </div>
         </section>

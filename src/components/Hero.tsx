@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section className="max-w-6xl text-white h-[84vh] flex justify-center items-center py-12 px-6 md:px-32 lg:px-12">
-      <div className="hero max-w-5xl">
+      <div className="max-w-5xl">
         <p className="text-lg lg:text-2xl text-blue-500 dark:text-green-400 font-medium mb-4">
           Hola, mi nombre es
         </p>

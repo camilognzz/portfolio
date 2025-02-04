@@ -25,7 +25,7 @@ const experiences: IExperience[] = [
 ];
 
 
-const ExperienceCard = () => {
+const Experience = () => {
     const [selectedExperience, setSelectedExperience] = useState<IExperience>(experiences[0]);
 
     return (
@@ -42,7 +42,7 @@ const ExperienceCard = () => {
                     {experiences.map((exp, index) => (
                         <button
                             key={index}
-                            className={`text-lg font-semibold text-start px-4 py-2 rounded-none transition-all duration-300 
+                            className={`text-lg text-start px-4 py-2 rounded-none transition-all duration-300 
                                 border-l-4 ${selectedExperience.company === exp.company
                                     ? "text-white dark:text-[#D0DAFA] bg-[#8F98B7] dark:bg-[#1E293B] border-l-4 dark:border-green-400 border-blue-500 cursor-pointer transition shadow-lg"
                                     : "text-[#374151] dark:text-gray-400 hover:text-white hover:dark:text-[#D0DAFA] hover:bg-[#8F98B7] hover:dark:bg-[#1E293B] border-l-4 border-transparent cursor-pointer"}`}
@@ -91,4 +91,4 @@ const ExperienceCard = () => {
     );
 };
 
-export default ExperienceCard;
+export default Experience;
