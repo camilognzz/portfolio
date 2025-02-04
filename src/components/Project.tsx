@@ -49,13 +49,14 @@ const ProjectSection = () => {
                             <div key={index} className="relative w-full max-w-5xl mx-auto py-12 flex flex-col md:flex-row items-center gap-8">
 
                                 <div className={`w-full md:w-[55%] relative ${!isEven ? "md:order-2" : ""}`}>
-                                    <img
-                                        src={project.imageSrc}
-                                        alt={project.title}
-                                        className="w-full rounded-sm opacity-70 hover:opacity-100 transition"
-                                    />
+                                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={project.imageSrc}
+                                            alt={project.title}
+                                            className="w-full rounded-sm opacity-70 cursor-pointer hover:opacity-100 transition"
+                                        />
+                                    </a>
                                 </div>
-
 
                                 <div className={`w-full md:w-[45%] relative z-10 p-6 rounded-lg ${!isEven ? "md:order-1" : ""}`}>
 
@@ -63,21 +64,17 @@ const ProjectSection = () => {
                                         Featured Project
                                     </p>
 
+                                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                                        <h3 className={`${isEven ? "text-end" : "text-start"} text-3xl font-bold text-[#8F98B7] dark:text-[#D0DAFA] hover:text-blue-500 hover:dark:text-green-400 mt-2`}>
+                                            {project.title}
+                                        </h3>
+                                    </a>
 
-                                    <h3 className={`${isEven ? "text-end" : "text-start"} text-3xl font-bold text-[#8F98B7] dark:text-[#D0DAFA] mt-2`}>
-                                        {project.title}
-                                    </h3>
-
-
-                                    <div className={`bg-[#DEE1E6] dark:bg-[#101A2D] text-white p-6 rounded-md shadow-lg mt-4 ${isEven
-                                        ? "-ml-[20%] md:-ml-[30%]"
-                                        : "-mr-[20%] md:-mr-[30%]"
-                                        } w-[120%] md:w-[130%] relative z-20`}>
-                                        <p className={`${isEven ? "text-end" : "text-start"} text-sm text-[#374151] dark:text-gray-400 leading-relaxed`}>
+                                    <div className={`flex bg-[#DEE1E6] dark:bg-[#101A2D] p-4 md:p-6 rounded-md shadow-lg mt-4 relative z-20 w-[90%] md:w-[130%] ${isEven ? "ml-[10%] md:-ml-[30%] justify-end" : "-mr-[10%] md:-mr-[30%] justify-start"}`}>
+                                        <p className={`${isEven ? "text-end" : "text-start"} text-xs md:text-sm text-[#374151] dark:text-gray-400 leading-relaxed`}>
                                             {project.description}
                                         </p>
                                     </div>
-
 
                                     <div className={`flex flex-wrap gap-4 mt-6 text-sm text-gray-400 ${isEven ? "justify-end" : "justify-start"
                                         }`}>
@@ -87,7 +84,6 @@ const ProjectSection = () => {
                                             </span>
                                         ))}
                                     </div>
-
 
                                     <div className={`flex gap-4 mt-6 ${isEven ? "justify-end" : "justify-start"
                                         }`}>
