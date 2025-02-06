@@ -32,7 +32,7 @@ const projects = [
 
 const ProjectSection = () => {
     return (
-        <section id="projects" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
+        <section id="proyectos" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
             <div className="roboto flex flex-col md:flex-row items-start gap-10">
                 <div className="md:w-2/2 flex flex-col mb-6">
                     <div className="flex items-center gap-2 mb-6">

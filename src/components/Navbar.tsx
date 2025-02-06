@@ -5,6 +5,10 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
+  const removeAccents = (str: string) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -26,7 +30,7 @@ const Navbar = () => {
           {["Sobre mí", "Educación", "Experiencia", "Proyectos", "Contacto"].map((item) => (
             <li key={item}>
               <a
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                href={`#${removeAccents(item.toLowerCase().replace(" ", "-"))}`}
                 className="hover:text-blue-500 dark:hover:text-green-400 transition relative pb-1 
              after:absolute after:right-0 after:bottom-0 after:w-full after:h-[2px] 
              after:bg-blue-500 dark:after:bg-green-400 after:scale-x-0 
@@ -70,7 +74,7 @@ const Navbar = () => {
           {["Sobre mí", "Educación", "Experiencia", "Proyectos", "Contacto"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              href={`#${removeAccents(item.toLowerCase().replace(" ", "-"))}`}
               className="text-2xl font-medium hover:text-blue-500 dark:hover:text-green-400 transition"
               onClick={() => setMenuOpen(false)}
             >

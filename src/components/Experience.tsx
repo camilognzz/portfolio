@@ -29,7 +29,7 @@ const Experience = () => {
     const [selectedExperience, setSelectedExperience] = useState<IExperience>(experiences[0]);
 
     return (
-        <section id="experience" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
+        <section id="experiencia" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
             <div className="flex items-center gap-2 mb-6">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-[#8F98B7] dark:text-[#D0DAFA] mb-0">
                     Experiencia

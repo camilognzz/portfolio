@@ -74,7 +74,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="about" className="max-w-6xl mx-auto py-16 px-4 sm:px-6 md:px-32 lg:px-12">
+    <section id="contacto" className="max-w-6xl mx-auto py-16 px-4 sm:px-6 md:px-32 lg:px-12">
       {showNotification && (
         <div className="fixed top-5 right-5 bg-blue-500 dark:bg-green-500 text-white py-2 px-4 rounded-none shadow-lg animate-slide-in">
           Mensaje enviado correctamente.
