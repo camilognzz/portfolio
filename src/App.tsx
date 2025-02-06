@@ -5,6 +5,7 @@ import  AboutMe  from './components/AboutMe';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import ProjectSection from './components/Project';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Education/>
       <Experience/>
       <ProjectSection/>
+      <Contact/>
       <h1 className="text-[#374151] text-center dark:text-white">dfdd</h1>
       <button
         onClick={() => setDarkMode(!darkMode)}
