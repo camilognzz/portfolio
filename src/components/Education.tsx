@@ -1,6 +1,6 @@
 const Education = () => {
     return (
-        <section id="about" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
+        <section id="educacion" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
             <div className="flex flex-col md:flex-row items-start gap-10">
 
                 <div className="md:w-2/2 flex flex-col mb-6">
