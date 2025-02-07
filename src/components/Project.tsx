@@ -1,4 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const projects = [
     {
@@ -46,8 +47,14 @@ const ProjectSection = () => {
                         const isEven = index % 2 === 0;
 
                         return (
-                            <div key={index} className="relative w-full max-w-5xl mx-auto py-12 flex flex-col md:flex-row items-center gap-8">
-
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                                className="relative w-full max-w-5xl mx-auto py-12 flex flex-col md:flex-row items-center gap-8"
+                            >
                                 <div className={`w-full md:w-[55%] relative ${!isEven ? "md:order-2" : ""}`}>
                                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                                         <img
@@ -59,7 +66,6 @@ const ProjectSection = () => {
                                 </div>
 
                                 <div className={`w-full md:w-[45%] relative z-10 p-6 rounded-lg ${!isEven ? "md:order-1" : ""}`}>
-
                                     <p className={`${isEven ? "text-end" : "text-start"} text-blue-500 dark:text-green-400 uppercase text-sm font-semibold`}>
                                         Featured Project
                                     </p>
@@ -76,8 +82,7 @@ const ProjectSection = () => {
                                         </p>
                                     </div>
 
-                                    <div className={`flex flex-wrap gap-4 mt-6 text-sm text-gray-400 ${isEven ? "justify-end" : "justify-start"
-                                        }`}>
+                                    <div className={`flex flex-wrap gap-4 mt-6 text-sm text-gray-400 ${isEven ? "justify-end" : "justify-start"}`}>
                                         {project.technologies.map((tech, techIndex) => (
                                             <span key={techIndex} className="text-[#374151] dark:text-[#D0DAFA] px-2 py-1">
                                                 {tech}
@@ -85,8 +90,7 @@ const ProjectSection = () => {
                                         ))}
                                     </div>
 
-                                    <div className={`flex gap-4 mt-6 ${isEven ? "justify-end" : "justify-start"
-                                        }`}>
+                                    <div className={`flex gap-4 mt-6 ${isEven ? "justify-end" : "justify-start"}`}>
                                         <a
                                             href={project.githubLink}
                                             target="_blank"
@@ -105,12 +109,13 @@ const ProjectSection = () => {
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                        )
+                            </motion.div>
+                        );
                     })}
                 </div>
             </div>
         </section>
     );
 };
+
 export default ProjectSection;

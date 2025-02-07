@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
@@ -18,12 +19,22 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="nav w-full dark:shadow-none py-8 px-6">
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="nav w-full dark:shadow-none py-8 px-6"
+    >
       <div className="container mx-auto flex justify-between items-center">
-
-        <div className="flex items-center gap-2 text-2xl font-bold text-[#374151] dark:text-white ">
-          <img src="/camilogonzalez-logo.svg" alt="Logo Camilo Gonzalez" className="h-8 w-auto" />
-          <a href="#" className="hidden lg:block leading-none font-[Oswald]">Camilo González</a>
+        <div className="flex items-center gap-2 text-2xl font-bold text-[#374151] dark:text-white">
+          <img
+            src="/camilogonzalez-logo.svg"
+            alt="Logo Camilo Gonzalez"
+            className="h-8 w-auto"
+          />
+          <a href="#" className="hidden lg:block leading-none font-[Oswald]">
+            Camilo González
+          </a>
         </div>
 
         <ul className="hidden md:flex space-x-6 ml-auto font-[Roboto]">
@@ -53,7 +64,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2  rounded-md"
+            className="md:hidden p-2 rounded-md"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -83,7 +94,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

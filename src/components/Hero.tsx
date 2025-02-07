@@ -1,25 +1,20 @@
-import { useState } from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [showCursor, setShowCursor] = useState<boolean>(true);
-
-  const [text] = useTypewriter({
-    words: ["Camilo González."],
-    loop: 1,
-    typeSpeed: 150,
-    deleteSpeed: 50,
-    onLoopDone: () => setShowCursor(false),
-  });
 
   return (
     <section className="max-w-6xl text-white h-[84vh] flex justify-center items-center py-12 px-6 md:px-32 lg:px-12">
-      <div className="max-w-5xl">
+      <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-5xl"
+      >
         <p className="text-lg lg:text-2xl text-blue-500 dark:text-green-400 font-medium mb-4">
           Hola, mi nombre es
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#8F98B7] dark:text-[#D0DAFA] mb-4">
-          {text} {showCursor && <Cursor />}
+          Camilo González.
         </h1>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-400 mb-4">
           Desarrollador Fullstack.
@@ -38,7 +33,7 @@ const Hero = () => {
         >
           Descargar CV
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };

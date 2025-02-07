@@ -1,10 +1,17 @@
+import { motion } from "framer-motion";
+
 const Education = () => {
     return (
-        <section id="educacion" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
+        <motion.section
+            id="educacion"
+            className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+        >
             <div className="flex flex-col md:flex-row items-start gap-10">
-
                 <div className="md:w-2/2 flex flex-col mb-6">
-
                     <div className="flex items-center gap-2 mb-6">
                         <div className="flex-1 h-[1px] bg-[#8F98B7] dark:bg-[#D0DAFA]"></div>
                         <h2 className="text-4xl sm:text-5xl font-extrabold text-[#8F98B7] dark:text-[#D0DAFA] mb-0">
@@ -68,7 +75,14 @@ const Education = () => {
                                     year: "2024"
                                 }
                             ].map((cert, index) => (
-                                <div key={index} className="flex flex-col sm:flex-row justify-between sm:items-center">
+                                <motion.div
+                                    key={index}
+                                    className="flex flex-col sm:flex-row justify-between sm:items-center"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                >
                                     <div>
                                         <h4 className="text-lg sm:text-xl font-medium text-[#374151] dark:text-[#D0DAFA]">
                                             {cert.name}
@@ -80,14 +94,13 @@ const Education = () => {
                                     <span className="text-lg sm:text-xl text-[#374151] dark:text-gray-400">
                                         {cert.year}
                                     </span>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
-
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

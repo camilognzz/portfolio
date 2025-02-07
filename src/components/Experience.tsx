@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface IExperience {
     company: string;
     title: string;
     period: string;
     description: string[];
-    url: string; 
+    url: string;
 }
 
 const experiences: IExperience[] = [
@@ -24,12 +25,24 @@ const experiences: IExperience[] = [
     }
 ];
 
-
 const Experience = () => {
     const [selectedExperience, setSelectedExperience] = useState<IExperience>(experiences[0]);
 
+    // Hook para detectar si el componente está en vista
+    const { ref, inView } = useInView({
+        triggerOnce: true, // Solo se ejecuta una vez
+        threshold: 0.2 // Se activa cuando el 20% del componente está visible
+    });
+
     return (
-        <section id="experiencia" className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12">
+        <motion.section
+            id="experiencia"
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="max-w-6xl mx-auto py-16 px-6 md:px-32 lg:px-12"
+        >
             <div className="flex items-center gap-2 mb-6">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-[#8F98B7] dark:text-[#D0DAFA] mb-0">
                     Experiencia
@@ -66,9 +79,9 @@ const Experience = () => {
                             <h2 className="text-2xl font-bold text-[#8F98B7] dark:text-[#D0DAFA]">
                                 {selectedExperience.title}
                                 <a
-                                    href={selectedExperience.url} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+                                    href={selectedExperience.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="text-blue-500 dark:text-green-400 ml-2 relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1px] before:bg-blue-500 dark:before:bg-green-400 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
                                 >
                                     @{selectedExperience.company}
@@ -87,7 +100,7 @@ const Experience = () => {
                 </div>
 
             </div>
-        </section>
+        </motion.section>
     );
 };
 

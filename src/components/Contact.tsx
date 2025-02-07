@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -74,7 +75,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="max-w-6xl mx-auto py-16 px-4 sm:px-6 md:px-32 lg:px-12">
+    <motion.section
+      id="contacto"
+      className="max-w-6xl mx-auto py-16 px-4 sm:px-6 md:px-32 lg:px-12"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       {showNotification && (
         <div className="fixed top-5 right-5 bg-blue-500 dark:bg-green-500 text-white py-2 px-4 rounded-none shadow-lg animate-slide-in">
           Mensaje enviado correctamente.
@@ -162,8 +170,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </section>
-
+    </motion.section>
   );
 };
 
