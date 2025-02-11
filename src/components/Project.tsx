@@ -32,7 +32,7 @@ const projects = [
     {
         title: "Fundación Habacuc",
         description:
-            "Sitio web diseñado para gestionar proyectos, voluntarios y contactos estratégicos. Presenta una interfaz intuitiva que facilita la navegación y el acceso a información clave sobre la fundación.",
+            "Sitio web informativo que presenta la misión, proyectos y actividades de la fundación. Diseñado con una interfaz clara y atractiva para facilitar el acceso a su contenido.",
         technologies: ["WordPress"],
         imageSrc: "/images/fundacion-habacuc.png",
         githubLink: "https://github.com/camilognzz/",
