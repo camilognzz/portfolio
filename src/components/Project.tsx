@@ -1,32 +1,42 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const projects = [
     {
-        title: "Halcyon Theme",
+        title: "Gestión Solidaria",
         description:
-            "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-        technologies: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-        imageSrc: "https://steam-portfolio-demo.vercel.app/project-imgs/example-project.jpg",
-        githubLink: "https://github.com/usuario/proyecto",
-        liveLink: "https://proyecto.com",
+            "Software de gestión para fundaciones, diseñado para administrar contactos estratégicos, voluntarios, proyectos y estado financiero. Facilita la organización, el monitoreo y la transparencia en la gestión de la fundación.",
+        technologies: ["Spring Boot", "React", "TypeScript", "Tailwind CSS"],
+        imageSrc: "images/gestion-solidaria.png",
+        githubLink: "https://github.com/camilognzz/",
+        liveLink: "https://camilogonzalez.vercel.app/",
     },
     {
-        title: "Halcyon Theme",
+        title: "Buscador de personajes de Rick y Morty",
         description:
-            "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-        technologies: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-        imageSrc: "https://steam-portfolio-demo.vercel.app/project-imgs/example-project.jpg",
-        githubLink: "https://github.com/usuario/proyecto",
-        liveLink: "https://proyecto.com",
+            "Aplicación para explorar personajes de Rick y Morty y buscarlos por nombre de forma dinámica. Utiliza la API oficial para ofrecer una experiencia interactiva y visualmente atractiva.",
+        technologies: ["React", "TypeScript", "Tailwind CSS"],
+        imageSrc: "/images/rick-and-morty.png",
+        githubLink: "https://github.com/camilognzz/api-rick-and-morty.git",
+        liveLink: "https://api-rick-and-morty-seven.vercel.app/",
     },
     {
-        title: "Halcyon Theme",
+        title: "ArtSale",
         description:
-            "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-        technologies: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-        imageSrc: "https://steam-portfolio-demo.vercel.app/project-imgs/example-project.jpg",
-        githubLink: "https://github.com/usuario/proyecto",
-        liveLink: "https://proyecto.com",
+            "Landing page para la venta de arte contemporáneo, con un diseño moderno y minimalista.",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS."],
+        imageSrc: "/images/artsale.png",
+        githubLink: "https://github.com/camilognzz/artsale.git",
+        liveLink: "https://artsale-nine.vercel.app/",
+    },
+    {
+        title: "Fundación Habacuc",
+        description:
+            "Sitio web diseñado para gestionar proyectos, voluntarios y contactos estratégicos. Presenta una interfaz intuitiva que facilita la navegación y el acceso a información clave sobre la fundación.",
+        technologies: ["WordPress"],
+        imageSrc: "/images/fundacion-habacuc.png",
+        githubLink: "https://github.com/camilognzz/",
+        liveLink: "https://fundacionhabacuc.org/",
     }
 ];
 
@@ -46,22 +56,27 @@ const ProjectSection = () => {
                         const isEven = index % 2 === 0;
 
                         return (
-                            <div key={index} className="relative w-full max-w-5xl mx-auto py-12 flex flex-col md:flex-row items-center gap-8">
-
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                                className="relative w-full max-w-5xl mx-auto py-12 flex flex-col md:flex-row items-center gap-8"
+                            >
                                 <div className={`w-full md:w-[55%] relative ${!isEven ? "md:order-2" : ""}`}>
                                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                                         <img
                                             src={project.imageSrc}
                                             alt={project.title}
-                                            className="w-full rounded-sm opacity-70 cursor-pointer hover:opacity-100 transition"
+                                            className="w-[545px] h-[346px] object-cover rounded-sm opacity-70 cursor-pointer hover:opacity-100 transition"
                                         />
                                     </a>
                                 </div>
 
                                 <div className={`w-full md:w-[45%] relative z-10 p-6 rounded-lg ${!isEven ? "md:order-1" : ""}`}>
-
                                     <p className={`${isEven ? "text-end" : "text-start"} text-blue-500 dark:text-green-400 uppercase text-sm font-semibold`}>
-                                        Featured Project
+                                        Proyecto Destacado
                                     </p>
 
                                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
@@ -76,8 +91,7 @@ const ProjectSection = () => {
                                         </p>
                                     </div>
 
-                                    <div className={`flex flex-wrap gap-4 mt-6 text-sm text-gray-400 ${isEven ? "justify-end" : "justify-start"
-                                        }`}>
+                                    <div className={`flex flex-wrap gap-4 mt-6 text-sm text-gray-400 ${isEven ? "justify-end" : "justify-start"}`}>
                                         {project.technologies.map((tech, techIndex) => (
                                             <span key={techIndex} className="text-[#374151] dark:text-[#D0DAFA] px-2 py-1">
                                                 {tech}
@@ -85,8 +99,7 @@ const ProjectSection = () => {
                                         ))}
                                     </div>
 
-                                    <div className={`flex gap-4 mt-6 ${isEven ? "justify-end" : "justify-start"
-                                        }`}>
+                                    <div className={`flex gap-4 mt-6 ${isEven ? "justify-end" : "justify-start"}`}>
                                         <a
                                             href={project.githubLink}
                                             target="_blank"
@@ -105,12 +118,13 @@ const ProjectSection = () => {
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                        )
+                            </motion.div>
+                        );
                     })}
                 </div>
             </div>
         </section>
     );
 };
+
 export default ProjectSection;
