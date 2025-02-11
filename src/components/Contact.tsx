@@ -154,7 +154,7 @@ const Contact = () => {
                 required
                 minLength={10}
                 maxLength={500}
-                className="w-full p-2 sm:p-3 border border-gray-300 dark:border-gray-500 rounded-lg bg-gray-100 dark:bg-[#1B2A41] text-gray-900 dark:text-gray-200 focus:ring-2 focus:ring-blue-400 dark:focus:ring-green-400 transition-all h-28 sm:h-32 resize-none"
+                className="w-full p-2 sm:p-3 border border-gray-300 dark:border-gray-500 rounded-lg bg-gray-100 dark:bg-[#1B2A41] text-gray-900 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-400 dark:focus:ring-green-400 transition-all h-28 sm:h-32 resize-none"
               />
             </div>
             <div className="mb-6 flex justify-center">
