@@ -3,10 +3,12 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    return localStorage.getItem("darkMode") === "true";
-  });
+  const [darkMode, setDarkMode] = useState<boolean>(true);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const removeAccents = (str: string) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
 
   useEffect(() => {
     if (darkMode) {
@@ -14,12 +16,7 @@ const Navbar = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
-
-  const removeAccents = (str: string) => {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  };
 
   return (
     <motion.nav
