@@ -26,6 +26,6 @@ Me apasiona construir soluciones eficientes y escalables, siempre buscando mejor
    ```
 
 ## 📫 Contáctame
-- 📧 [Email](camilogs2218@gmail.com)
+- 📧 [Email](mailto:camilogs2218@gmail.com)
 - 💼 [LinkedIn](https://www.linkedin.com/in/camilognzz1)
 - 💻 [Portafolio](https://camilogonzalez.vercel.app/)
