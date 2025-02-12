@@ -49,7 +49,7 @@ const AboutMe = () => {
             </div>
 
             <motion.div
-                className="flex justify-start gap-4"
+                className="flex justify-start items-center gap-4"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -60,6 +60,15 @@ const AboutMe = () => {
                 </a>
                 <a href="https://github.com/camilognzz" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="text-[#333] dark:text-[#D0DAFA] text-3xl hover:scale-110 transition-transform" />
+                </a>
+                <a
+                    href="/Camilo-Gonzalez-CV.pdf"
+                    download="Camilo-Gonzalez-CV.pdf"
+                    className="inline-block px-5 sm:px-6 py-2 sm:py-3 font-semibold border border-[#333] text-[#333] rounded-md 
+                    hover:bg-[#333] hover:text-[#D0DAFA] dark:border-[#D0DAFA] dark:text-[#D0DAFA] 
+                    dark:hover:bg-[#D0DAFA] dark:hover:text-[#0F172A] transition"
+                >
+                    Ver currículum
                 </a>
             </motion.div>
         </motion.section>

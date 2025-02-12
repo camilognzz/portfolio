@@ -24,7 +24,7 @@ const projects = [
         title: "ArtSale",
         description:
             "Landing page para la venta de arte contemporáneo, con un diseño moderno y minimalista.",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS."],
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
         imageSrc: "/images/artsale.png",
         githubLink: "https://github.com/camilognzz/artsale.git",
         liveLink: "https://artsale-nine.vercel.app/",
