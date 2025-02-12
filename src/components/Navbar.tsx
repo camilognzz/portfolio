@@ -3,12 +3,10 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    return localStorage.getItem("darkMode") === "true";
+  });
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const removeAccents = (str: string) => {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  };
 
   useEffect(() => {
     if (darkMode) {
@@ -16,7 +14,12 @@ const Navbar = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
+
+  const removeAccents = (str: string) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
 
   return (
     <motion.nav
@@ -27,12 +30,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2 text-2xl font-bold text-[#374151] dark:text-white">
-          <img
-            src="/camilogonzalez-logo.svg"
-            alt="Logo Camilo Gonzalez"
-            className="h-8 w-auto"
-          />
-          <a href="#" className="hidden lg:block leading-none font-[Oswald]">
+          <a href="/">
+            <img
+              src="/camilogonzalez-logo.svg"
+              alt="Logo Camilo Gonzalez"
+              className="h-8 w-auto"
+            />
+          </a>
+          <a href="/" className="hidden lg:block leading-none font-[Oswald]">
             Camilo González
           </a>
         </div>
@@ -57,7 +62,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4 md:border-l md:pl-4 md:ml-4 md:border-gray-300 dark:md:border-gray-700">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            className="p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition cursor-pointer"
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>

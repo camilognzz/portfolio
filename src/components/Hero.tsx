@@ -25,13 +25,12 @@ const Hero = () => {
           de plataformas web interactivas, diseño responsivo y optimización del rendimiento.
         </p>
         <a
-          href="/Camilo-Gonzalez-CV.pdf"
-          download="Camilo-Gonzalez-CV.pdf"
+          href="#contacto"
           className="inline-block mt-6 px-5 sm:px-6 py-2 sm:py-3 font-semibold border border-blue-500 text-blue-500 rounded-md 
              hover:bg-blue-500 hover:text-[#0F172A] dark:border-green-400 dark:text-green-400 
              dark:hover:bg-green-400 dark:hover:text-[#0F172A] transition"
         >
-          Descargar CV
+          Contáctame
         </a>
       </motion.div>
     </section>

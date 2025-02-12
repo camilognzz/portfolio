@@ -28,10 +28,9 @@ const experiences: IExperience[] = [
 const Experience = () => {
     const [selectedExperience, setSelectedExperience] = useState<IExperience>(experiences[0]);
 
-    // Hook para detectar si el componente está en vista
     const { ref, inView } = useInView({
-        triggerOnce: true, // Solo se ejecuta una vez
-        threshold: 0.2 // Se activa cuando el 20% del componente está visible
+        triggerOnce: true, 
+        threshold: 0.2 
     });
 
     return (

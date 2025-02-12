@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# 👋 Hola, soy Camilo González
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Desarrollador Full Stack
 
-Currently, two official plugins are available:
+Me apasiona construir soluciones eficientes y escalables, siempre buscando mejorar la experiencia del usuario.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🛠️ Tecnologías:
+- **Frontend:** HTML, CSS, JS, TypeScript, React, Next.js, Tailwind CSS.
+- **Backend:** Node.js, Spring Boot.
+- **BD:** MySQL, MongoDB.
+- **Otros:** Docker, Vercel.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Instalación y Uso
+1. Clonar el repositorio:  
+   ```bash
+   git clone https://github.com/camilognzz/portfolio.git
+   ```
+2. Instalar dependencias:  
+   ```bash
+   npm install
+   ```
+3. Ejecutar el proyecto:  
+   ```bash
+   npm run dev
+   ```
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 📫 Contáctame
+- 📧 [Email](camilogs2218@gmail.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/camilognzz1)
+- 💻 [Portafolio](https://camilogonzalez.vercel.app/)
