@@ -16,10 +16,12 @@ const experiences: IExperience[] = [
         title: "Desarrollador Web",
         period: "Agosto 2023 – Octubre 2024",
         description: [
-            "Diseñé y desarrollé un sitio web responsive y accesible, mejorando la visibilidad de la organización y optimizando la experiencia del usuario.",
-            "Diseñé e implementé API RESTful para manejar los flujos de datos entre el frontend y el backend, asegurando tiempos de respuesta óptimos y escalabilidad.",
-            "Implementé un sistema seguro de donaciones en línea utilizando pasarelas de pago, logrando un aumento del 30% en los aportes durante el primer trimestre tras su lanzamiento.",
-            "Proporcioné soporte técnico post-lanzamiento, resolviendo problemas y optimizando funcionalidades basadas en los comentarios de los usuarios.",
+            "Diseñé y desarrollé un sitio web responsive y accesible, mejorando la visibilidad de la organización, optimizando la experiencia del usuario y asegurando compatibilidad con diferentes dispositivos y navegadores.",
+            "Desarrollé una plataforma web integrando frontend, backend y base de datos, enfocándome en escalabilidad, usabilidad y eficiencia en la gestión de datos.",
+            "Implementé API RESTful eficientes para gestionar la comunicación entre el frontend y el backend, optimizando flujos de datos, garantizando seguridad y asegurando tiempos de respuesta óptimos y escalabilidad.",
+            "Proporcioné soporte técnico post-lanzamiento, resolviendo incidencias, mejorando funcionalidades basadas en feedback de los usuarios y aplicando actualizaciones para optimizar el rendimiento del sistema.",
+            "Apliqué estrategias avanzadas de SEO, mejorando el posicionamiento en motores de búsqueda mediante optimización de contenido, estructura del sitio, velocidad de carga y buenas prácticas de indexación.",
+            "Utilicé herramientas de análisis y monitoreo para evaluar el rendimiento del sitio y aplicar mejoras continuas."
         ],
         url: "https://fundacionhabacuc.org"
     }

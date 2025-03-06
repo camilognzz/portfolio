@@ -31,7 +31,7 @@ const AboutMe = () => {
                             </h3>
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {[
-                                    "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js",
+                                    "HTML", "CSS", "JavaScript", "TypeScript", "React", "React Native", "Next.js",
                                     "Tailwind CSS", "Node.js", "Spring Boot", "MySQL", "MongoDB",
                                     "Git", "GitHub", "Jira", "Trello", "WordPress"
                                 ].map((tech) => (
