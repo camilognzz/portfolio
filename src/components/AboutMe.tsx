@@ -36,7 +36,7 @@ const AboutMe = () => {
                                 {[
                                     "HTML", "CSS", "JavaScript", "TypeScript", "React",
                                     ".NET", "PHP", "Spring Boot", "MySQL", "MongoDB",
-                                    "Git", "GitHub", "Docker", "Jira", "Trello"
+                                    "Git", "GitHub", "GitHub Actions", "Docker", "AWS EC2", "VPS", "Jira", "Trello"
                                 ].map((tech) => (
                                     <span
                                         key={tech}
