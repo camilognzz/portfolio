@@ -22,18 +22,21 @@ const AboutMe = () => {
 
                     <div className="flex flex-col md:flex-row gap-6">
                         <p className="text-lg sm:text-xl text-[#374151] dark:text-gray-400 leading-relaxed md:w-2/3 mb-6">
-                            Soy ingeniero de sistemas y desarrollador full stack con experiencia en tecnologías modernas para la creación de soluciones eficientes y centradas en la experiencia del usuario. Tengo conocimientos en desarrollo web utilizando <span className="text-blue-500 dark:text-green-400">HTML, CSS, JavaScript, TypeScript, React, Next.js</span> y <span className="text-blue-500 dark:text-green-400">Tailwind CSS</span>, enfocándome en construir interfaces optimizadas y de alto rendimiento. En el backend, he trabajado con <span className="text-blue-500 dark:text-green-400">Node.js</span> y <span className="text-blue-500 dark:text-green-400">Spring Boot</span>, desarrollando sistemas escalables y seguros, además de gestionar bases de datos como <span className="text-blue-500 dark:text-green-400">MySQL</span> y <span className="text-blue-500 dark:text-green-400">MongoDB</span>.
+                            Desarrollador Full Stack con experiencia en el diseño y desarrollo de aplicaciones web centradas en la experiencia del 
+                            usuario. He trabajado con <span className="text-blue-500 dark:text-green-400">PHP, .NET, Java y Spring Boot</span> en el desarrollo backend, y con <span className="text-blue-500 dark:text-green-400">JavaScript, TypeScript y 
+                            React.js</span> en la creación de interfaces modernas y dinámicas. Manejo bases de datos <span className="text-blue-500 dark:text-green-400">MySQL y MongoDB,</span> aplicando 
+                            principios de código limpio, arquitectura escalable y buenas prácticas de desarrollo para garantizar soluciones 
+                            eficientes, seguras y de alto rendimiento. 
                         </p>
-
                         <div className="md:w-1/3 flex flex-col">
                             <h3 className="text-xl font-semibold text-[#8F98B7] dark:text-[#D0DAFA] mb-4">
                                 Tecnologías
                             </h3>
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {[
-                                    "HTML", "CSS", "JavaScript", "TypeScript", "React", "React Native", "Next.js",
-                                    "Tailwind CSS", "Node.js", "Spring Boot", "MySQL", "MongoDB",
-                                    "Git", "GitHub", "Jira", "Trello", "WordPress"
+                                    "HTML", "CSS", "JavaScript", "TypeScript", "React",
+                                    ".NET", "PHP", "Spring Boot", "MySQL", "MongoDB",
+                                    "Git", "GitHub", "Docker", "Jira", "Trello"
                                 ].map((tech) => (
                                     <span
                                         key={tech}

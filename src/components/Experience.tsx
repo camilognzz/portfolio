@@ -11,6 +11,20 @@ interface IExperience {
 }
 
 const experiences: IExperience[] = [
+     {
+        company: "IPS 911 Asistencia Médica Domiciliaria",
+        title: "Desarrollador de Software",
+        period: "Mayo 2025 – Octubre 2025 ",
+        description: [
+            "Lideré el mantenimiento y la mejora de los sistemas internos de la institución, asegurando su disponibilidad en entornos críticos del sector salud.",
+            "Desarrollé e implementé módulos para la gestión médica, logística y administrativa, optimizando la trazabilidad de pacientes y recursos.",
+            "Atendí solicitudes y requerimientos de usuarios de diferentes áreas, brindando soporte técnico y funcional para asegurar la continuidad operativa de los sistemas.",
+            "Participé en la integración de datos clínicos y administrativos, asegurando el cumplimiento de estándares de seguridad y confidencialidad en el manejo de información sensible de pacientes.",
+            "Colaboré con equipos interdisciplinarios para alinear las soluciones tecnológicas con los objetivos institucionales y las necesidades médicas.",
+            "Utilicé tecnologías como PHP, .NET, MySQL y JavaScript en el desarrollo, mantenimiento y soporte de los sistemas, aplicando buenas prácticas de programación y control de versiones."
+        ],
+        url: "https://fundacionhabacuc.org"
+    },
     {
         company: "Fundación Habacuc",
         title: "Desarrollador Web",
